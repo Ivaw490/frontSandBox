@@ -1,0 +1,63 @@
+html {
+    font-size: 20px;
+    font-family: Special Gothic Expanded One;
+}
+
+body {
+    border: 0;
+    margin: 0;
+    min-width: 570px;
+    background-color: black;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+    .header-text {
+        position: absolute;
+        color: rgba(255, 255, 255, 0.57);
+        margin: 0;
+        word-break: break-word;
+        line-height: 100%;
+        font-size: 100px;
+        letter-spacing: 1px;
+        /*min-width: 570px;*/
+    }
+
+    .header-img {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        /*min-width: 570px;*/
+    }
+
+li, p {
+    font-family: Calibri, sans-serif;
+    letter-spacing: 1px;
+}
+
+.menu-title {
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.37);
+    text-shadow: 0 0 15px #00f3ff;
+    margin-left: 17px;
+}
+.menu-item {
+    cursor: pointer;
+    user-select: none;
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.37);
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0 0 17px #000000;
+}
+.menu-item:hover {
+    color: #ff8900;
+    text-shadow: 0 0 15px #00f3ff;
+}
+.menu-item-down {
+    text-shadow: 0 0 10px #ff8900!important; /** todo **/
+}
