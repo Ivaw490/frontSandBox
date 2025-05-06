@@ -1,18 +1,15 @@
-let toBeContinue = document.getElementsByClassName("continue")
+let toBeContinue = document.querySelector(".continue")
+let menu = document.querySelector(".menu")
 let continueState = 1
 
-console.log(toBeContinue)
+menu.onmousedown = (e) => {
+    e.target.classList.toggle('menu-item-selected')
+}
+menu.onmouseup = (e) => {
+    e.target.classList.toggle('menu-item-selected')
+}
 
-toBeContinue.onmousedown = () => {
-    console.log(11)
-    toBeContinue.classList.toggle('menu-item-down')
-}
-toBeContinue.onmouseup = () => {
-    console.log(22)
-    toBeContinue.classList.toggle('menu-item-down')
-}
-toBeContinue.onClick = () => {
-    console.log(33)
+toBeContinue.onclick = () => {
     if (continueState === 1) {
         toBeContinue.textContent = 'to be continue...'
         continueState = 2

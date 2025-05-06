@@ -1,28 +1,41 @@
-let userButton = document.getElementsByClassName("user_button");
-let headerText = document.getElementsByClassName("header-text");
+let userButton = document.querySelector(".user_button");
+let userButtonDel = document.querySelector("#user_button_del");
+let selectedUser = document.querySelector("#selected_user");
+let headerText = document.querySelector(".header-text-user");
 
-userNameChecker();
+userNameChecker()
 
-userButton.onclick = function() {
+userButton.onclick = () => {
     console.log(123)
     setUserName()
 }
 
+userButtonDel.onclick = () => {
+    localStorage.removeItem("userName");
+    userNameChecker()
+}
+
 function setUserName() {
-    console.log(123)
     let userName = prompt("Enter your name");
+
+    if (userName === "") {
+        return
+    }
     localStorage.setItem("userName", userName);
-    headerText.textContent += '<br>by ' + userName;
+
+    userNameChecker()
 }
 
 function userNameChecker()
 {
-    console.log(!localStorage.getItem("userName"))
-    console.log(userButton)
-    if (!localStorage.getItem("userName")) { // todo
-        userButton.textContent += ' <p style="color: #ff8900">(не выбран)</p>';
+    let userName = localStorage.getItem("userName");
+    if (!userName) {
+        selectedUser.innerHTML = ' (не выбран)'
+        selectedUser.style.color = '#ff8900'
+        headerText.innerHTML = '';
     } else {
-        userButton.textContent +=
-            ' <p style="color: #00ff0d">(' + localStorage.getItem("userName") + ')</p>';
+        selectedUser.innerHTML = ' ' + userName
+        selectedUser.style.color = '#00ff0d'
+        headerText.innerHTML = '<br>by ' + userName;
     }
 }

@@ -55,9 +55,10 @@ li, p {
     text-shadow: 0 0 17px #000000;
 }
 .menu-item:hover {
-    color: #ff8900;
-    text-shadow: 0 0 15px #00f3ff;
+    color: rgba(255, 137, 0, 0.6);
+    text-shadow: 0 0 10px #00f3ff;
 }
-.menu-item-down {
-    text-shadow: 0 0 10px #ff8900!important; /** todo **/
+.menu-item-selected {
+    color: rgba(0, 243, 255, 0.6) !important;
+    text-shadow: 0 0 10px #ff8900 !important;
 }

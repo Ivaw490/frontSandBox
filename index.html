@@ -10,12 +10,18 @@
 </head>
 <body>
 <div class="header">
-    <p class="header-text">Studying<br>sandbox page</p>
+    <p class="header-text">
+        Studying<br>sandbox page
+        <span class="header-text-user"></span>
+    </p>
     <img class="header-img" src="public/img/little-img.jpg" alt="Маленькое изображение абстракции" />
 </div>
 <p class="menu-title">Меню:</p>
-<ul>
-    <li class="user_button menu-item">Пользователь</li>
+<ul class="menu">
+    <li class="user_button menu-item">
+        Пользователь<span id="selected_user"></span>
+    </li>
+    <li id="user_button_del" class="menu-item">Очистить пользователя</li>
     <li class="continue menu-item">Продолжение следует...</li>
 </ul>
 
