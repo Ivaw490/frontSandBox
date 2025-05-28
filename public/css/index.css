@@ -8,11 +8,13 @@ body {
     margin: 0;
     min-width: 570px;
     background-color: #272727;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* todo не работает */
     color: #bdbdbd;
 }
 a {
     text-decoration: none;
+}
+.nav-menu-item a{
     color: #bdbdbd;
 }
 .header {
@@ -43,7 +45,7 @@ li, p {
     padding: 0;
     width: 800px;
 }
-    .menu-item {
+    .menu-item, .menu-item a {
         cursor: pointer;
         user-select: none;
         margin-right: 10px;
@@ -52,7 +54,8 @@ li, p {
         font-weight: bold;
         text-shadow: 0 0 17px #000000;
     }
-    .menu-item:hover {
+    .menu-item:hover,
+    .menu-item a:hover {
         color: rgba(255, 137, 0, 0.6);
         text-shadow: 0 0 10px #00f3ff;
     }
@@ -65,15 +68,18 @@ li, p {
     text-align: left;
     margin: 0 auto;
 }
+    .big_text p {
+        scroll-margin: 15px;
+    }
 #to_top{
     position: fixed;
     right: 10px;
     bottom: 10px;
-    background: #000;
+    background: rgba(0, 0, 0, 0.33);
     color: aqua;
-    border-radius: 50%;
+    border-radius: 85%;
     width: 85px;
-    height: 85px;
-    line-height: 85px;
+    height: 65px;
+    line-height: 65px;
     text-align: center;
 }
