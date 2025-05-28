@@ -39,8 +39,9 @@ li, p {
 }
 .menu{
     text-align: center;
-    margin: 15px 10px 15px;
+    margin: 15px auto 15px;
     padding: 0;
+    width: 800px;
 }
     .menu-item {
         cursor: pointer;
@@ -60,7 +61,7 @@ li, p {
         text-shadow: 0 0 10px #ff8900 !important;
     }
 .big_text {
-    width: 80%;
+    width: 800px;
     text-align: left;
     margin: 0 auto;
 }
