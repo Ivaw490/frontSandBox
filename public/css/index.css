@@ -1,6 +1,6 @@
 html {
     font-size: 20px;
-    font-family: Special Gothic Expanded One;
+    font-family: Special Gothic Expanded One, serif;
 }
 
 body {
@@ -55,6 +55,7 @@ li, p {
         color: #244B5B;
         font-style: italic;
         font-weight: bold;
+        text-transform: uppercase;
         text-shadow: 0 0 17px #000000;
         transition: color .2s;
     }
@@ -64,8 +65,7 @@ li, p {
         text-shadow: 0 0 10px #244B5B;
     }
     .menu-item-selected {
-        color: rgba(0, 243, 255, 0.6) !important;
-        text-shadow: 0 0 10px #ff8900 !important;
+        text-shadow: 0 0 5px #244B5B !important;
     }
 .big_text {
     width: 800px;
@@ -73,12 +73,13 @@ li, p {
     margin: 0 auto;
 }
     .big_text p {
+        text-indent: 25px;
         scroll-margin: 15px;
     }
 #to_top{
     position: fixed;
-    right: 10px;
-    bottom: 10px;
+    right: 1%;
+    bottom: 1%;
     background-color: #244B5B;
     mask-image: url("../img/cube.svg");
     mask-size: contain;
