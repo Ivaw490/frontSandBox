@@ -7,33 +7,36 @@ body {
     border: 0;
     margin: 0;
     min-width: 570px;
-    background-color: #272727;
+    background-color: #C3D4C5;
     scroll-behavior: smooth; /* todo не работает */
-    color: #bdbdbd;
+    color: #244B5B;
 }
 a {
     text-decoration: none;
 }
-.nav-menu-item a{
-    color: #bdbdbd;
+.container {
+    width: 1170px;
+    margin: 0 auto;
 }
 .header {
-    position: relative;
-    width: 100%;
+    align-items: center;
+    justify-content: left;
+    display: flex;
     height: 200px;
+    background-image: url(../img/pattern-hexes-of-cubes_1_1.svg);
 }
     .header-text {
-        position: absolute;
-        color: rgba(255, 255, 255, 0.57);
-        margin: 0;
-        word-break: break-word;
-    }
-    .header-img {
-        padding: 0;
-        width: 100%;
+        background-color: #C3D4C5;
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 50%;
+        padding-left: 20px;
+        color: #244B5B;
+        font-weight: bold;
         height: 100%;
-        /*min-width: 570px;*/
+        align-content: center;
+        font-size: 50px;
     }
+
 li, p {
     display: inline-block;
     font-family: Calibri, sans-serif;
@@ -43,21 +46,22 @@ li, p {
     text-align: center;
     margin: 15px auto 15px;
     padding: 0;
-    width: 800px;
+    width: 100%;
 }
     .menu-item, .menu-item a {
         cursor: pointer;
         user-select: none;
         margin-right: 10px;
-        color: rgba(255, 255, 255, 0.37);
+        color: #244B5B;
         font-style: italic;
         font-weight: bold;
         text-shadow: 0 0 17px #000000;
+        transition: color .2s;
     }
     .menu-item:hover,
     .menu-item a:hover {
-        color: rgba(255, 137, 0, 0.6);
-        text-shadow: 0 0 10px #00f3ff;
+        color: #C3D4C5;
+        text-shadow: 0 0 10px #244B5B;
     }
     .menu-item-selected {
         color: rgba(0, 243, 255, 0.6) !important;
@@ -75,11 +79,38 @@ li, p {
     position: fixed;
     right: 10px;
     bottom: 10px;
-    background: rgba(0, 0, 0, 0.33);
-    color: aqua;
-    border-radius: 85%;
-    width: 85px;
-    height: 65px;
-    line-height: 65px;
-    text-align: center;
+    background-color: #244B5B;
+    mask-image: url("../img/cube.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    color: #244B5B;
+    width: 90px;
+    height: 90px;
+    transition: color .2s;
 }
+    #to_top p {
+        position: absolute;
+        margin: 0;
+        transition: color .2s;
+    }
+    #to_top .top{
+        top: 9px;
+        left: 30px;
+    }
+    #to_top .left{
+        top: 40px;
+        left: 12px;
+        transform: rotateZ(45deg);
+    }
+    #to_top .right{
+        top: 40px;
+        right: 12px;
+        transform: rotateZ(-45deg);
+    }
+    #to_top p:hover {
+        color: #C3D4C5;
+    }
+    #to_top:active {
+        color: #C3D4C5;
+        transition: color .4s;
+    }
