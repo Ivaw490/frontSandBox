@@ -20,33 +20,57 @@ a {
 }
 .header {
     align-items: center;
-    justify-content: left;
+    justify-content: space-between;
     display: flex;
     height: 200px;
     background-image: url(../img/pattern-hexes-of-cubes-grey.svg);
 }
+    .header-item {
+        background-color: #244B5B;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        color: #d0d0d0;
+        height: 100%;
+        align-content: center;
+        min-width: 340px;
+        font-weight: bold;
+    }
     .header-text {
-        background-color: #d0d0d0;
+        /*mask-image: image-set(url("../img/cube.svg"), --rotate_left);  todo*/
         border-bottom-right-radius: 50%;
         border-top-right-radius: 50%;
         padding-left: 20px;
-        color: #244B5B;
-        font-weight: bold;
-        height: 100%;
-        align-content: center;
         font-size: 50px;
     }
+    .user-menu {
+        display: flex;
+        justify-content: space-evenly;
+        /*mask-image: image(url("../img/cube.svg"), --rotate_right);  todo*/
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        padding: 5px 20px;
+        font-size: 20px;
+    }
+        .user-menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+        #user_button_add,
+        #user_button_del {
+            cursor: pointer;
+        }
 
 li, p {
     display: inline-block;
     font-family: Calibri, sans-serif;
     letter-spacing: 1px;
 }
-.menu{
+
+.menu {
     text-align: center;
     margin: 15px auto 15px;
     padding: 0;
-    width: 100%;
 }
     .menu-item, .menu-item a {
         cursor: pointer;
